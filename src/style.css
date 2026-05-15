@@ -179,7 +179,7 @@ body{
 }
 
 .contet1 img{
-    max-width: 7%;
+    max-width: 13%;
     background: rgba(255, 255, 255, 0.926);
     padding: 10px 10px;
     border: #053e8f;
@@ -374,7 +374,7 @@ body{
     }
 
     .contet1 img{
-    max-width: 12%;
+    max-width: 14%;
     background: rgba(189, 186, 196, 0.926);
     padding: 10px 10px;
     border: #1e4b8a;
@@ -1231,10 +1231,7 @@ body{
 
     .loader-title{
     color: #ffffff;
-    text-shadow: 
-        0 0 5px #38bdf8,
-        0 0 10px #38bdf8,
-        0 0 20px #38bdf8;
+ 
 }
 }
 
@@ -1745,5 +1742,279 @@ body{
 
     .project .judul h1{
         font-size: 24px;
+    }
+}
+/* =========================
+   TENTANG FRESH STYLE
+========================= */
+.tentang{
+    padding: 110px 8%;
+}
+
+.tentang .container{
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr .9fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* KIRI */
+.about-tag{
+    display: inline-block;
+
+    color: rgb(12, 101, 236);
+    font-size: 15px;
+
+    border-bottom:
+    2px solid #38bdf8;
+
+    padding-bottom: 6px;
+
+    margin-bottom: 18px;
+}
+
+.contet h1,
+.contet1 h1{
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.contet h2{
+    color: white;
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contet h2 span{
+    color: rgb(12, 101, 236);
+}
+
+.contet p,
+.contet1 p{
+    color: #94a3b8;
+    line-height: 1.9;
+}
+
+/* INFO LINE */
+.info-line{
+    margin-top: 35px;
+}
+
+.line-item{
+    display: flex;
+    gap: 18px;
+
+    margin-bottom: 28px;
+
+    border-left:
+    2px solid rgba(56,101,236,.3);
+
+    padding-left: 18px;
+}
+
+.line-item span{
+    font-size: 28px;
+}
+
+.line-item h4{
+    color: white;
+    margin-bottom: 6px;
+}
+
+/* KANAN */
+.quote{
+    position: relative;
+    margin: 30px 0;
+}
+
+.quote span{
+    font-size: 90px;
+    color: rgba(56,189,248,.2);
+
+    position: absolute;
+    top: -30px;
+    left: -10px;
+}
+
+.quote p{
+    color: white;
+    font-size: 22px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+}
+
+/* SOSMED */
+
+.m-item a{
+    transition: .3s ease;
+}
+
+.m-item a:hover{
+    transform:
+    translateY(-8px)
+    scale(1.1);
+}
+
+
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .tentang{
+        padding: 70px 18px;
+    }
+
+    .tentang .container{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contet h1,
+    .contet1 h1{
+        font-size: 30px;
+    }
+
+    .contet h2{
+        font-size: 22px;
+    }
+
+    .quote p{
+        font-size: 18px;
+    }
+
+    .m-item{
+        justify-content: center;
+    }
+}
+
+
+/* =========================
+   FONT LEBIH KECIL DESKTOP
+========================= */
+.contet h1,
+.contet1 h1{
+    font-size: 34px !important;
+}
+
+.contet h2{
+    font-size: 25px !important;
+    line-height: 1.5;
+}
+
+.contet p,
+.contet1 p{
+    font-size: 14px !important;
+    line-height: 1.8;
+}
+
+.about-tag{
+    font-size: 13px !important;
+}
+
+.line-item h4{
+    font-size: 15px;
+}
+
+.line-item p{
+    font-size: 13px !important;
+}
+
+.quote p{
+    font-size: 19px !important;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:768px){
+
+    .contet h1,
+    .contet1 h1{
+        font-size: 26px !important;
+    }
+
+    .contet h2{
+        font-size: 20px !important;
+    }
+
+    .contet p,
+    .contet1 p{
+        font-size: 13px !important;
+    }
+
+    .quote p{
+        font-size: 16px !important;
+    }
+
+    .line-item h4{
+        font-size: 14px;
+    }
+
+    .line-item p{
+        font-size: 12px !important;
+    }
+
+    .m-item img{
+        width: 24px !important;
+        height: 24px !important;
+    }
+}
+
+/* =========================
+   MEDIA SOSIAL FIX TOTAL
+========================= */
+.medsos{
+    margin-top: 28px;
+}
+
+.m-item{
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* tombol icon */
+
+
+/* hover */
+.m-item a:hover{
+    transform:
+    translateY(-6px)
+    scale(1.08);
+
+    background:
+    rgba(56,189,248,.15);
+
+    box-shadow:
+    0 0 18px rgba(56,189,248,.18);
+}
+
+/* FIX ICON */
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:768px){
+
+    .m-item{
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .m-item a{
+        width: 46px;
+        height: 46px;
+    }
+
+    .m-item a img{
+        width: 22px !important;
+        height: 22px !important;
     }
 }

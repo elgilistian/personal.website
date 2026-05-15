@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Saya</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow:hidden;
+}
+
+/* ===== LOADER ===== */
+#loader{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(135deg,#0f172a,#111827);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:opacity .8s ease, visibility .8s ease;
+}
+
+.loader-box{
+    width:340px;
+    text-align:center;
+}
+
+.loader-title{
+    font-size:22px;
+    color:#38bdf8;
+    margin-bottom:12px;
+    letter-spacing:1px;
+}
+
+.loader-text{
+    height:25px;
+    font-size:15px;
+    color:#cbd5e1;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+/* LOADING BAR */
+.loading-bar{
+    width:100%;
+    height:8px;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#38bdf8,#60a5fa);
+    border-radius:20px;
+    box-shadow:0 0 15px rgba(56,189,248,.5);
+    transition:width .2s linear;
+}
+
+.percent{
+    margin-top:12px;
+    font-size:13px;
+    color:#94a3b8;
+}
+
+/* ===== WEBSITE ===== */
+.content{
+    display:none;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.content h1{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+    <div class="loader-box">
+
+        <div class="loader-title">
+            Security Check
+        </div>
+
+        <div class="loader-text" id="loadingText">
+            Selamat Datang...
+        </div>
+
+        <div class="loading-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="percent" id="percent">
+            0%
+        </div>
+
+    </div>
+</div>
+
+<!-- Isi Website -->
+<div class="content" id="content">
+    <h1>Website Berhasil Dibuka</h1>
+    <p>Selamat datang di website saya.</p>
+</div>
+
+<script>
+const progress = document.getElementById("progress");
+const percent = document.getElementById("percent");
+const loadingText = document.getElementById("loadingText");
+const loader = document.getElementById("loader");
+const content = document.getElementById("content");
+
+let count = 0;
+
+const messages = [
+    "Selamat Datang...",
+    "Memulai pemeriksaan sistem...",
+    "Memverifikasi akses...",
+    "Mengamankan koneksi...",
+    "Bertahan dari pemeriksaan...",
+    "Hampir selesai...",
+    "Berhasil diverifikasi ✓"
+];
+
+let loading = setInterval(() => {
+    count++;
+
+    progress.style.width = count + "%";
+    percent.innerHTML = count + "%";
+
+    // Ganti tulisan bertahap
+    if(count === 10){
+        loadingText.innerHTML = messages[1];
+    }
+    if(count === 30){
+        loadingText.innerHTML = messages[2];
+    }
+    if(count === 50){
+        loadingText.innerHTML = messages[3];
+    }
+    if(count === 70){
+        loadingText.innerHTML = messages[4];
+    }
+    if(count === 90){
+        loadingText.innerHTML = messages[5];
+    }
+    if(count === 100){
+        loadingText.innerHTML = messages[6];
+    }
+
+    if(count >= 100){
+        clearInterval(loading);
+
+        setTimeout(() => {
+            loader.style.opacity = "0";
+            loader.style.visibility = "hidden";
+
+            document.body.style.overflow = "auto";
+            content.style.display = "block";
+        }, 900);
+    }
+
+}, 35);
+</script>
+
+</body>
+</html>

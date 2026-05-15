@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElgiWeb.io</title>
+<link rel="stylesheet" href="src/style.css">
+<meta property="og:title" content="elgilistian.website" />
+<meta property="og:description" content="Website portofolio elgi listian" />
+<meta property="og:image" content="https://elgilistian.github.io/Website.io/" />
+</head>
+
+
+<!-- CARD IDENTITAS -->
+<div class="identity-popup" id="identityPopup">
+
+    <div class="identity-card">
+
+        <span class="close-card" onclick="closeCard()">
+            ✕
+        </span>
+
+        <h2>Informasi Pribadi</h2>
+
+        <div class="info-box">
+            <span>Nama</span>
+            <p>Elgi Listiani</p>
+        </div>
+
+        <div class="info-box">
+            <span>Riwayat Pendidikan</span>
+            <p>SMAN 1 Bunut - MIPA, <br>
+              Universitas Islam Riau - Teknik Informatika</p>
+        </div>
+
+        <div class="info-box">
+            <span>Alamat</span>
+            <p>Riau, Indonesia</p>
+        </div>
+
+        <div class="info-box">
+            <span>Keahlian</span>
+            <p>HTML, CSS, JavaScript,Ui Design DLL</p>
+        </div>
+        <div class="info-box">
+            <span>Deskrpsi singkat</span>
+            <p>Saya seorang mahasiswa yang tertarik pada pengembangan website dan UI modern serta terus belajar teknologi web.</p>
+        </div>
+
+    </div>
+
+</div>
+<body>
+
+<div id="loader">
+    <div class="loader-box">
+
+        <div class="loader-title">
+            <b>Security Check</b>
+        </div>
+
+        <div class="loader-text" id="loadingText">
+            Selamat Datang...
+        </div>
+
+        <div class="loading-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="percent" id="percent">
+            0%
+        </div>
+
+    </div>
+</div>
+
+<nav class="navbar">
+
+    <h2>ElgiWeb.io</h2>
+
+    <ul class="nav-menu">
+        <li><a href="#Beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#skil">Keahlian</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="">Spesial Page</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+
+<section class="beranda" id="Beranda">
+    <div class="container">
+
+        <div class="hero">
+            <h4 class="judul1">
+                Halo Semua 🙌, Perkenalkan Saya
+            </h4>
+
+            <h1 class="nama">
+                <b>ELGI LISTIAN</b>
+            </h1>
+
+            <h4 class="judul">
+                Mahasiswa | Junior Programer
+            </h4>
+
+            <p>
+                Selamat Datang Di website Saya,
+                Disini saya menyimpan Project codingan Saya,
+                <b>Adioss!</b>
+            </p>
+
+            <!-- Tombol Info -->
+            <button class="btn-detail" onclick="openCard()">
+                <b>Info Detail</b>
+            </button>
+        </div>
+
+        <div class="foto">
+            <img src="src/20260514_130643.png" alt="">
+        </div>
+
+    </div>
+</section>
+<section class="tentang" id="tentang">
+    <div class="container">
+        <div class="contet">
+        <h1><b>Tentang saya</b></h1>
+        <h2>Halo, Saya Seorang<span> Junior Programer,</span> Mahasiswa IT!</h2>
+        <p>Saat ini saya sedang berkuliah Di Jurusan Informatika disalah satu Universistas Di Riau, saya sedang mendalami,Dunia Percodingan salah satunya ialah membuat  website</p>
+        </div>
+        <div class="contet1">
+        <h1><b>Lebih Dekat</b></h1>
+        <p>Bagi saya, coding bukan hanya tentang program berjalan, tetapi juga bagaimana membuat tampilan yang nyaman dilihat dan mudah digunakan, <br>anda dapat melihat info lebih lanjut saya dengan pergi ke media sosial saya dibawah ini</p>
+        <div class="medsos">
+            <div class="m-item">
+                <a href="instagram.com/@legiiiii_"><img src="src/instagram.png" alt=""></a>
+                <a href="https://discord.gg/brHKTCWXx"><img src="src/discord.png" alt=""></a>
+                <a href="https://elgilistian.github.io/Detail_website/"><img src="src/tik-tok.png" alt=""></a>
+                <a href="https://github.com/elgilistian/"><img src="src/github.png" alt=""></a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="skil" id="skil">
+    <div class="content">
+        <div class="isi">
+            <h2><b>Keahlian</b></h2>
+            <h1 style="font-size: 30px; color: rgb(22, 104, 228);">Keahlian Saya</h1>
+            <p>Berikut beberapa keahlian saya dibidang pengembangan web, pengembangan sofwere dan debugging</p>
+            <div class="ahli">
+                <div class="gambar">
+                    <img src="src/c-.png" alt="" style="max-width: 10%;">
+                    <img src="src/python.png" alt="" style="max-width: 10%;">
+                    <img src="src/php.png" alt="" style="max-width: 10%;">
+                    <img src="src/html-5.png" alt="" style="max-width: 10%;">
+                    <img src="src/java-script.png" alt="" style="max-width: 10%;">
+                    <img src="src/mysql.png" alt="" style="max-width: 10%; background: white;">
+                </div>
+            </div>
+            <div class="statisktik">
+                <div class="skill">
+                    <div class="info">
+                        <span>C++</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress cpp"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="info">
+                        <span>python</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress python"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="info">
+                        <span>php</span>
+                        <span>35%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress php"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="info">
+                        <span>html & css</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress html"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="info">
+                        <span>java-script</span>
+                        <span>45%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress html1"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="info">
+                        <span>My sql</span>
+                        <span>40%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress Figma"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="war">ada beberapa keahlian yang belum saya sebutkan, Tentu Nya saya dalam tahap belajar, saya harap keahlian saya bisa meninggkat seiring waktu</p>
+         
+        </div>
+    </div>
+</section>
+
+
+<section class="project" id="project">
+
+    <div class="container">
+
+        <div class="judul">
+            <h2>Project</h2>
+            <h1>Project Saya</h1>
+
+            <p>
+                Berikut beberapa project yang pernah saya buat
+                dalam bidang pengembangan website dan desain modern.
+            </p>
+        </div>
+
+        <div class="project-box">
+
+            <!-- CARD 1 -->
+            <div class="card-project">
+
+                <div class="gambar-project">
+                    <img src="src/port-1.png" alt="">
+                </div>
+
+                <div class="isi-project">
+                    <h3>Website pencatatan tugas</h3>
+
+                    <p>
+                      Website yang saya buat menggunakan php dan berbasis databese yang digunakan dalam menejemen tugas
+                    </p>
+
+                    <p><a href="tugasku.wuaze.com">lihat project</a></p>
+                </div>
+
+            </div>
+            <div class="card-project">
+
+                <div class="gambar-project">
+                    <img src="src/port-2.png" alt="">
+                </div>
+
+                <div class="isi-project">
+                    <h3>Website Sistem rumah saki</h3>
+
+                    <p>
+                     Merancang sebuah sistem rumah sakit dalam tugas pengembangan perangkat lunak yang terdiri dari admin, user dan dokter
+                    </p>
+
+                    <p><a href="https://www.figma.com/design/YzN11HNQhirbsye4E2nyQr/RUMAH-SAKIT-UIR?node-id=135-3&t=wIgO6L29iyFgVkTS-1">lihat project</a></p>
+                </div>
+
+            </div>
+            <div class="card-project">
+
+                <div class="gambar-project">
+                    <img src="src/port-3.jpg" alt="">
+                </div>
+
+                <div class="isi-project">
+                    <h3>Game dengan Python</h3>
+
+                    <p>
+                      Saya mencoba membuat game sederhana dengan python menggunakan quary pygame!, tujuan game nya ialah melewati rintang untuk mendapatkan harta
+
+                    <p><a href="#project">lihat project</a></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+
+    hamburger.classList.toggle("active");
+
+    navMenu.classList.toggle("active");
+});
+const progress = document.getElementById("progress");
+const percent = document.getElementById("percent");
+const loadingText = document.getElementById("loadingText");
+const loader = document.getElementById("loader");
+const content = document.getElementById("content");
+
+let count = 0;
+
+const messages = [
+    "Selamat Datang...",
+    "Memulai pemeriksaan sistem...",
+    "Memverifikasi akses...",
+    "Mengamankan koneksi...",
+    "Bertahan dari pemeriksaan...",
+    "Hampir selesai...",
+    "Berhasil diverifikasi ✓"
+];
+
+let loading = setInterval(() => {
+    count++;
+
+    progress.style.width = count + "%";
+    percent.innerHTML = count + "%";
+
+    // Ganti tulisan bertahap
+    if(count === 10){
+        loadingText.innerHTML = messages[1];
+    }
+    if(count === 30){
+        loadingText.innerHTML = messages[2];
+    }
+    if(count === 50){
+        loadingText.innerHTML = messages[3];
+    }
+    if(count === 70){
+        loadingText.innerHTML = messages[4];
+    }
+    if(count === 90){
+        loadingText.innerHTML = messages[5];
+    }
+    if(count === 100){
+        loadingText.innerHTML = messages[6];
+    }
+
+    if(count >= 100){
+        clearInterval(loading);
+
+        setTimeout(() => {
+            loader.style.opacity = "0";
+            loader.style.visibility = "hidden";
+
+            document.body.style.overflow = "auto";
+            content.style.display = "block";
+        }, 900);
+    }
+
+}, );
+
+function openCard(){
+    document
+    .getElementById("identityPopup")
+    .classList.add("show");
+}
+
+function closeCard(){
+    document
+    .getElementById("identityPopup")
+    .classList.remove("show");
+}
+</script>
+
+
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+    <div class="blog-container">
+
+        <div class="blog-title">
+            <h1 style="font-size: 28px; margin-bottom: 10px;">Blog Saya</h1>
+            <p style="font-size: 17px;">Beberapa artikel dan catatan tentang dunia coding serta pengembangan website.</p>
+        </div>
+
+        <div class="blog-grid">
+
+            <div class="blog-card">
+                <img src="src/js.jpg" alt="">
+                <div class="blog-content">
+                    <h2>Belajar HTML Dasar</h2>
+                    <p>Pengenalan dasar HTML untuk membuat struktur website modern.</p>
+                    <a href="https://elgilistian.github.io/Detail_website/">Baca Selengkapnya</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="src/programer.jpg" alt="">
+                <div class="blog-content">
+                    <h2>Tips CSS Modern</h2>
+                    <p>Cara membuat tampilan website lebih modern menggunakan CSS.</p>
+                    <a href="https://elgilistian.github.io/Detail_website/">Baca Selengkapnya</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="src/apa-itu-coding-Small.jpg" alt="">
+                <div class="blog-content">
+                    <h2>Animasi Website</h2>
+                    <p>Membuat website lebih hidup dengan animasi ringan dan smooth.</p>
+                    <a href="https://elgilistian.github.io/Detail_website/">Baca Selengkapnya</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- KONTAK -->
+<section class="kontak" id="kontak">
+
+    <div class="kontak-container">
+
+        <div class="kontak-text">
+            <h1>Hubungi Saya</h1>
+            <p>Silakan hubungi saya untuk kolaborasi project, freelance ataupun diskusi seputar teknologi.</p>
+        </div>
+
+        <form class="kontak-form" action="https://formsubmit.co/elgilistian@gmail.com" method="POST">
+            <input type="text" placeholder="Nama Anda">
+            <input type="email" placeholder="Email Anda">
+            <textarea placeholder="Pesan Anda"></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h1>ElgiWeb.io</h1>
+            <p>
+                Website portfolio modern yang menampilkan project,
+                skill, dan perjalanan saya di dunia programming
+                dan web development.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h2>Navigasi</h2>
+
+            <a href="#home">Home</a>
+            <a href="#about">Tentang</a>
+            <a href="#project">Project</a>
+            <a href="#blog">Blog</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+
+        <div class="footer-social">
+            <h2>Social Media</h2>
+
+            <a href="#">Instagram</a>
+            <a href="#">Github</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">YouTube</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Elgi Listian — All Rights Reserved</p>
+    </div>
+
+</footer>
+
+</body>
+</html>

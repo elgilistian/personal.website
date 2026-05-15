@@ -1149,6 +1149,8 @@ body{
 
 }
 
+
+
 #loader{
     position:fixed;
     width:100%;
@@ -1230,7 +1232,7 @@ body{
     }
 
     .loader-title{
-    color: #ffffff;
+    color: #3555d9;
  
 }
 }
@@ -2016,5 +2018,415 @@ body{
     .m-item a img{
         width: 22px !important;
         height: 22px !important;
+    }
+}
+/* =========================
+   HERO / BERANDA
+========================= */
+.beranda{
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 8%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* blur background */
+.blur{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+}
+
+.blur1{
+    width: 350px;
+    height: 350px;
+
+    background:
+    rgba(56,189,248,.12);
+
+    top: -100px;
+    left: -100px;
+}
+
+.blur2{
+    width: 300px;
+    height: 300px;
+
+    background:
+    rgba(59,130,246,.12);
+
+    bottom: -80px;
+    right: -80px;
+}
+
+.beranda .container{
+    max-width: 1250px;
+    width: 100%;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 30px;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   HERO TEXT
+========================= */
+
+
+.judul1{
+    color: #94a3b8;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.nama{
+    font-size: 72px;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.judul{
+    color: white;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.judul span{
+    color: #3238b5;
+}
+
+.hero p{
+    color: #94a3b8;
+    line-height: 1.9;
+    font-size: 16px;
+    max-width: 620px;
+}
+
+/* =========================
+   MINI INFO
+========================= */
+.mini-info{
+    display: flex;
+    gap: 18px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.mini-info div h2{
+    color: #38bdf8;
+    font-size: 28px;
+}
+
+.mini-info span{
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.hero-button{
+    display: flex;
+    gap: 16px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.btn-detail,
+.btn-project{
+    padding: 14px 28px;
+    border-radius: 18px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn-detail{
+    border: none;
+    background:
+    linear-gradient(
+        135deg,
+        #0d0b79,
+        #173c8b
+    );
+
+    color: white;
+}
+
+.btn-project{
+    border: 1px solid rgba(255,255,255,.15);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-detail:hover,
+.btn-project:hover{
+    transform: translateY(-5px);
+}
+
+/* =========================
+   FOTO
+========================= */
+.foto{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-bg{
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(56,189,248,.25),
+        transparent 70%
+    );
+}
+
+.foto img{
+    width: 360px;
+    position: relative;
+    z-index: 2;
+
+    animation:
+    float 4s ease-in-out infinite;
+}
+
+/* floating */
+@keyframes float{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-12px);
+    }
+}
+
+/* badge */
+.badge{
+    position: absolute;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter: blur(15px);
+
+    padding: 12px 18px;
+    border-radius: 18px;
+
+    color: white;
+    font-size: 14px;
+
+    z-index: 3;
+}
+
+.badge1{
+    top: 80px;
+    left: 10px;
+}
+
+.badge2{
+    bottom: 90px;
+    right: 0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:768px){
+
+    .beranda{
+        min-height: auto;
+        padding: 110px 20px 70px;
+    }
+
+    .beranda .container{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .nama{
+        font-size: 42px;
+    }
+
+    .judul{
+        font-size: 20px;
+    }
+
+    .hero p{
+        font-size: 14px;
+        margin: auto;
+    }
+
+    .mini-info{
+        justify-content: center;
+    }
+
+    .hero-button{
+        justify-content: center;
+    }
+
+    .foto{
+        order: -1;
+    }
+
+    .foto img{
+        width: 240px;
+    }
+
+    .circle-bg{
+        width: 280px;
+        height: 280px;
+    }
+
+    .badge{
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .badge1{
+        left: 0;
+        top: 50px;
+    }
+
+    .badge2{
+        right: 0;
+        bottom: 60px;
+    }
+}
+
+/* =========================
+   FIX FONT BERANDA DESKTOP
+========================= */
+
+/* Nama */
+.nama{
+    font-size: 56px !important;
+    line-height: 1.1;
+}
+
+/* Halo semua */
+.judul1{
+    font-size: 16px !important;
+}
+
+/* Mahasiswa | Junior Programer */
+.judul{
+    font-size: 21px !important;
+}
+
+/* Deskripsi */
+.hero p{
+    font-size: 15px !important;
+    max-width: 560px;
+}
+
+/* status open learning */
+.status{
+    font-size: 13px !important;
+    padding: 8px 16px;
+}
+
+/* statistik kecil */
+.mini-info div h2{
+    font-size: 24px !important;
+}
+
+.mini-info span{
+    font-size: 13px !important;
+}
+
+/* tombol */
+.btn-detail,
+.btn-project{
+    font-size: 14px !important;
+    padding: 12px 24px;
+}
+
+/* =========================
+   LAPTOP KECIL
+========================= */
+@media(max-width:1200px){
+
+    .nama{
+        font-size: 50px !important;
+    }
+
+    .judul{
+        font-size: 20px !important;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:768px){
+
+    .nama{
+        font-size: 30px !important;
+    }
+
+    .judul{
+        font-size: 17px !important;
+    }
+
+    .hero p{
+        font-size: 14px !important;
+    }
+}
+.navbar{
+    position: fixed;
+    top: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 92%;
+    max-width: 1250px;
+
+ 
+
+    padding: 18px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background:
+    rgba(15,23,42,.55);
+
+    backdrop-filter: blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    border-radius: 22px;
+
+    transition: 4.9s ease;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.18);
+}
+
+@media(max-width:768px){
+    .nav-menu{
+        background: #142236;
+        border: #00d9ff;
+        border-style: solid;
     }
 }

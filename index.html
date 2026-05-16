@@ -121,17 +121,6 @@
                 <span>Junior Programer</span>
             </h4>
 
-            <p>
-                Selamat datang di website portfolio saya.
-                Di sini saya menyimpan berbagai project,
-                pembelajaran coding, dan perkembangan saya
-                dalam dunia teknologi serta pengembangan website modern.
-            </p>
-
-            <!-- statistik -->
-
-
-            <!-- tombol -->
             <div class="hero-button">
 
                 <button class="btn-detail"
@@ -141,6 +130,16 @@
                 </button>
 
             </div>
+
+            <p>
+                Selamat datang di website portfolio saya.
+                Di sini saya menyimpan berbagai project,
+                pembelajaran coding, dan perkembangan saya
+                dalam dunia teknologi serta pengembangan website modern.
+            </p>
+
+            <!-- statistik -->
+
 
         </div>
 
@@ -277,6 +276,7 @@
 
 </section>
 
+<!-- skill -->
 <section class="skil" id="skil">
     <div class="content">
         <div class="isi">
@@ -297,7 +297,7 @@
                 <div class="skill">
                     <div class="info">
                         <span>C++</span>
-                        <span>70%</span>
+                        <span style="color: rgb(29, 164, 164); font-weight: 800;">Advanced</span>
                     </div>
                     <div class="bar">
                         <div class="progress cpp"></div>
@@ -306,7 +306,7 @@
                 <div class="skill">
                     <div class="info">
                         <span>python</span>
-                        <span>60%</span>
+                        <span style="color: rgb(173, 41, 183); font-weight: 800;">Confident</span>
                     </div>
                     <div class="bar">
                         <div class="progress python"></div>
@@ -315,7 +315,7 @@
                 <div class="skill">
                     <div class="info">
                         <span>php</span>
-                        <span>35%</span>
+                        <span style="color: rgb(173, 41, 183); font-weight: 800;">Confident</span>
                     </div>
                     <div class="bar">
                         <div class="progress php"></div>
@@ -324,7 +324,7 @@
                 <div class="skill">
                     <div class="info">
                         <span>html & css</span>
-                        <span>90%</span>
+                        <span style="color: rgb(29, 164, 164); font-weight: 800;">Advanced</span>
                     </div>
                     <div class="bar">
                         <div class="progress html"></div>
@@ -333,7 +333,7 @@
                 <div class="skill">
                     <div class="info">
                         <span>java-script</span>
-                        <span>45%</span>
+                        <span style="color: rgb(173, 41, 183); font-weight: 800;">Confident</span>
                     </div>
                     <div class="bar">
                         <div class="progress html1"></div>
@@ -342,7 +342,7 @@
                 <div class="skill">
                     <div class="info">
                         <span>My sql</span>
-                        <span>40%</span>
+                        <span style="color: rgb(173, 41, 183); font-weight: 800;">Confident</span>
                     </div>
                     <div class="bar">
                         <div class="progress Figma"></div>
@@ -355,7 +355,7 @@
     </div>
 </section>
 
-
+<!-- project -->
 <section class="project" id="project">
 
     <div class="container">
@@ -431,87 +431,6 @@
 </section>
 
 
-<script>
-
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-
-    hamburger.classList.toggle("active");
-
-    navMenu.classList.toggle("active");
-});
-const progress = document.getElementById("progress");
-const percent = document.getElementById("percent");
-const loadingText = document.getElementById("loadingText");
-const loader = document.getElementById("loader");
-const content = document.getElementById("content");
-
-let count = 0;
-
-const messages = [
-    "Selamat Datang...",
-    "Memulai pemeriksaan sistem...",
-    "Memverifikasi akses...",
-    "Mengamankan koneksi...",
-    "Bertahan dari pemeriksaan...",
-    "Hampir selesai...",
-    "Berhasil diverifikasi ✓"
-];
-
-let loading = setInterval(() => {
-    count++;
-
-    progress.style.width = count + "%";
-    percent.innerHTML = count + "%";
-
-    // Ganti tulisan bertahap
-    if(count === 10){
-        loadingText.innerHTML = messages[1];
-    }
-    if(count === 30){
-        loadingText.innerHTML = messages[2];
-    }
-    if(count === 50){
-        loadingText.innerHTML = messages[3];
-    }
-    if(count === 70){
-        loadingText.innerHTML = messages[4];
-    }
-    if(count === 90){
-        loadingText.innerHTML = messages[5];
-    }
-    if(count === 100){
-        loadingText.innerHTML = messages[6];
-    }
-
-    if(count >= 100){
-        clearInterval(loading);
-
-        setTimeout(() => {
-            loader.style.opacity = "0";
-            loader.style.visibility = "hidden";
-
-            document.body.style.overflow = "auto";
-            content.style.display = "block";
-        }, 900);
-    }
-
-}, );
-
-function openCard(){
-    document
-    .getElementById("identityPopup")
-    .classList.add("show");
-}
-
-function closeCard(){
-    document
-    .getElementById("identityPopup")
-    .classList.remove("show");
-}
-</script>
 
 
 
@@ -619,5 +538,6 @@ function closeCard(){
 
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
